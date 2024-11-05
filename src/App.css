@@ -1,0 +1,229 @@
+#root {
+  max-width: 1280px;
+  text-align: center;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 15%;
+  position: sticky;
+  top: 0;
+  background-color: #363232; /* Dark grey background */
+  height: 100vh;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  gap: 30px;
+  padding: 45px 20px;
+}
+
+.outlet-container {
+  width: 85%;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crew-img {
+  width: 350px;
+}
+
+.spaceship-img {
+  width: 600px;
+}
+
+.create-page img,
+.edit-page img {
+  width: 250px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin: 2em 0em;
+  align-items: flex-start;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  background-color: darkgray;
+  padding: 0em 2em 2em 2em;
+  border-radius: 10px;
+}
+
+.input-container li {
+  font-size: 1.1em;
+  color: white;
+}
+
+.delete-button {
+  margin-left: 20px;
+}
+
+.gallery-page img {
+  width: 100px;
+}
+
+.crewmates-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em 10%;
+  row-gap: 3em;
+  column-gap: 4em;
+}
+
+.crewmate-card {
+  background-color: darkgray;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 300px;
+  position: relative; /* Ensures stacking context */
+  margin-bottom: 20px; /* Space between cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.crewmate-card p {
+  font-size: 1.15em;
+  font-weight: 500;
+  color: white;
+  margin: 0; /* Reset margin to avoid collapsing issues */
+}
+
+.crewmate-card span {
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: darkgrey;
+}
+
+.crewmate-card .crewmate-category {
+  color: #333; /* Category text color */
+  font-size: 14px; /* Adjust font size as needed */
+  margin-top: 8px; /* Space above the category */
+}
+
+.crewmate-card#Green {
+  box-shadow: 10px -10px 15px #38be314d;
+}
+
+.crewmate-card#Purple {
+  box-shadow: 10px -10px 15px #6443b79c;
+}
+
+.crewmate-card#Blue {
+  box-shadow: 10px -10px 15px #201ba84d;
+}
+
+.crewmate-card#Rainbow {
+  box-shadow: 7px -5px 10px #4c0082b6, 11px -9px 10px #0000ff71,
+    16px -14px 10px #00ff007d, 20px -17px 10px #ffff0093,
+    24px -19px 10px #ff8000d7, 27px -23px 10px #eb1818af,
+    5px 5px 15px 5px #0000;
+}
+
+.crewmate-card#Yellow {
+  box-shadow: 10px -10px 15px #c7ba274d;
+}
+
+.crewmate-card#Red {
+  box-shadow: 10px -10px 15px #be2a2a4d;
+}
+
+.crewmate-card#Orange {
+  box-shadow: 10px -10px 15px #fa751685;
+}
+
+.crewmate-card#Pink {
+  box-shadow: 10px -10px 15px #b82bac81;
+}
+
+.detail-page img {
+  width: 150px;
+}
+
+.edit-page {
+  padding-bottom: 2em;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .outlet-container {
+    width: 100%;
+  }
+
+  .crewmates-container {
+    grid-template-columns: 1fr;
+    padding: 1em 2%;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-container {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .gallery-page img {
+    width: 80px;
+  }
+
+  .crew-img, .spaceship-img {
+    width: 100%;
+  }
+  .statistics {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+  }
+  
+  .statistics h2 {
+    margin: 0 0 10px;
+  }
+  
+  .statistics ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+}
